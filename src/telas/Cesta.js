@@ -2,14 +2,16 @@ import React from 'react';
 import { StyleSheet, Image, Dimensions, Text, View } from 'react-native';
 
 //import topo from '../../assets/topo.png';
-import topo from '../../assets/arara_topo3.png';
-import logo from '../../assets/logo.png';
+import topo from '../../assets/arara_topo4.png';
+import logo from "../../assets/arara_logo.jfif";
 
 const width = Dimensions.get('screen').width;
 
 export default function Cesta() {
   return <>
-    <Image source={topo} style={estilos.topo} />
+    <View style={estilos.container}>
+      <Image source={topo} style={estilos.topo} />
+    </View>
     <Text style={estilos.titulo}>Detalhe da cesta</Text>
 
     <View style={estilos.cesta}>
@@ -18,24 +20,29 @@ export default function Cesta() {
         <Image source={logo} style={estilos.imagemFazenda} />
         <Text style={estilos.nomeFazenda}>Squad 2</Text>
       </View>
-      <Text style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha</Text>
+      <Text style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua Squad</Text>
       <Text style={estilos.preco}>R$ 40,00</Text>
     </View>
   </>
 }
 
 const estilos = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   topo: {
     width: "100%",
-    height: 578 / 768 * width,
+    height: 300,
+    width: 300
   },
   titulo: {
     width: "100%",
     position: "absolute",
     textAlign: "center",
-    fontSize: 16,
-    lineHeight: 26,
-    color: "white",
+    fontSize: 30,
+    lineHeight: 30,
+    color: "green",
     fontWeight: "bold",
     padding: 16,
   },
