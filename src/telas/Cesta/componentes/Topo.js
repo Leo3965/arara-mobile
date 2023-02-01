@@ -3,7 +3,6 @@ import { Image, StyleSheet, Dimensions } from 'react-native';
 
 import Texto from '../../../componentes/Texto';
 
-//import topo from '../../../../assets/topo.png';
 import topo from '../../../../assets/arara_topo4.png';
 
 const width = Dimensions.get('screen').width;
@@ -12,7 +11,6 @@ export default function Topo({ titulo }) {
   return <>
     <Image source={topo} style={estilos.topo} />
     <Texto style={estilos.titulo}>{ titulo }</Texto>
-	
   </>
 }
 
